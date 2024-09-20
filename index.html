@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <title>Library Management Login</title>
+    <style>
+        body{
+            background-color: rgb(218, 206, 192);
+        }
+        .login-container{
+            background-color: white;
+            margin: 150px auto;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="login-container">
+        <h1>Library Management System</h1>
+        <!-- <form action="#" method="post"> -->
+            <input type="text" class="email" name="remail" placeholder="Username or Email" required>
+            <input type="password" class="pass" name="rpassword" placeholder="Password" required>
+            <div>
+                <h4>Login As: <select name="access"><option name="acs" value="signup">User</option><option name="acs" value="admin">Admin</option></select></h4>
+            </div>
+            <div class="b_c">
+            <button type="submit" class="cancel">Cancel</button>
+            <button name="login" class="login">Log In</button>
+            </div>
+        <!-- </form> -->
+    </div>
+    <script>
+        document.querySelector(".cancel").addEventListener("click",()=>{
+            document.querySelector(".email").value="";
+            document.querySelector(".pass").value="";
+        });
+        document.querySelector(".login").addEventListener("click",()=>{
+            let id="Dharani123";
+            let password="123456";
+            let check1=document.querySelector(".email").value;
+            let check2=document.querySelector(".pass").value;
+            if(check1==id && check2==password)
+        {
+            window.location.href="Admin home page.html";
+            alert("hi");
+        }
+        else{
+            alert("Enter valid id and password");
+        }
+
+            // document.querySelector(".pass").value="";
+
+        });
+    </script>
+    
+</body>
+</html>
